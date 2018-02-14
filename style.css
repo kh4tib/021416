@@ -1,0 +1,125 @@
+/* Global Styles  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    background-color: #161616;
+}
+
+/* Button Styles */
+
+.main-section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.main-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button {
+    outline: none;
+    position: relative;
+    border: 1px solid #fff;
+    height: 3rem;
+    width: 12rem;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    font-family: monospace;
+    color: #fff;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+
+.main-button-background:before {
+    content: '';
+    background-color: tomato;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3rem);
+    transition: .3s ease-in-out;
+    top: 0;
+    left: 0;
+}
+
+.main-button-background:after {
+    content: '';
+    background-color: tomato;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: translateY(3rem);
+    transition: .3s ease-in-out;
+    bottom: 0;
+    left: 0;
+}
+
+
+.main-button:hover .main-button-background:before,
+.main-button:hover .main-button-background:after {
+    animation: main-button-background-animation-in; 
+    transform: translateY(0rem);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: 1s ease-in-out;
+    transform-origin: 
+}
+
+
+/* @keyframes main-button-background-animation-in {
+
+    0% {
+        transform: translateY(3rem);
+        transition: .3s;   
+    }
+
+    100% {
+        transform: translateY(0rem);
+        transition: .3s; 
+    }
+    
+} */
+
+/* .main-button:hover .main-button-background {
+    animation: main-button-background-animation-out; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: 1s ease-in-out;
+    transform-origin: 
+}
+
+@keyframes main-button-background-animation-out {
+
+    0% {
+        transform: translateY(0rem);
+        transition: .3s;   
+    }
+
+    100% {
+        transform: translateY(-3rem);
+        transition: .3s; 
+    }
+    
+} */
